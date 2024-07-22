@@ -1,0 +1,1 @@
+C:\Users\Travis\source\repos\Templates\ReactJs_AspNetApi_Dockerized\ReactJs_AspNetApi_Dockerized\obj\Debug\reactjs_aspnetapi_dockerized.esproj.CoreCompileInputs.cache
