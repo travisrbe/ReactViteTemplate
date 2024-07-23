@@ -4,11 +4,11 @@ WORKDIR /app/
 COPY **/package.json **/package-lock.json ./
 
 RUN npm install
-COPY . /app/
+COPY ./reactjs_aspnetapi_dockerized /app/
 
-RUN ls .
+RUN ls
 
-RUN ls reactjs_aspnetapi_dockerized
+#RUN ls reactjs_aspnetapi_dockerized
 
 RUN npm run build
 
