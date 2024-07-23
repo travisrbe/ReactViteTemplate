@@ -7,14 +7,16 @@ on:
     branches: [ "main" ]
 
 jobs:
-
-  build:
-
+  Docker:
     runs-on: ubuntu-latest
-
+    
     steps:
     - uses: actions/checkout@v4
-    
+
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 21
+
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
