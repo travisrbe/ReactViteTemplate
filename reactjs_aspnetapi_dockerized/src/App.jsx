@@ -40,7 +40,7 @@ function App() {
     );
     
     async function populateWeatherData() {
-        const response = await fetch('https://localhost:32769/weatherforecast');
+        const response = await fetch('https://localhost:32773/weatherforecast');
         const data = await response.json();
         setForecasts(data);
     }

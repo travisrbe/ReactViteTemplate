@@ -36,6 +36,17 @@ const target = env.ASPNETCORE_HTTPS_PORT ? `https://localhost:${env.ASPNETCORE_H
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [react()],
+    preview: {
+        host: true,
+        port: 8080,
+        strictPort: true,
+        proxy: {
+            '^/weatherforecast': {
+                target: 'https://localhost:32769/',
+                secure: false
+            }
+        }
+    },
     resolve: {
         alias: {
             '@': fileURLToPath(new URL('./src', import.meta.url))
@@ -45,7 +56,6 @@ export default defineConfig({
         host: true,
         proxy: {
             '^/weatherforecast': {
-                
                 target: 'https://localhost:32769/',
                 secure: false
             }
