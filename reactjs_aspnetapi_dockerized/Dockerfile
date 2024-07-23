@@ -1,12 +1,12 @@
 FROM node:lts-alpine AS build_image
 
-WORKDIR /app
+WORKDIR /app/
 COPY **/package.json **/package-lock.json ./
 
 RUN npm install
-COPY . .
+COPY . /app/
 
-RUN npm run build 
+RUN npm run build
 
 # Production stage
 FROM node:lts-alpine AS prod_image
