@@ -8,6 +8,8 @@ COPY . /app/
 
 RUN ls
 
+RUN cd reactjs_aspnetapi_dockerized
+
 RUN npm run build
 
 # Production stage
