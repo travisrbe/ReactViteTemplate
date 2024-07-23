@@ -6,9 +6,7 @@ COPY **/package.json **/package-lock.json ./
 RUN npm install
 COPY . /app/
 
-RUN ls
-
-RUN ls reactjs_aspnetapi_dockerized
+RUN ls .
 
 RUN npm run build
 
