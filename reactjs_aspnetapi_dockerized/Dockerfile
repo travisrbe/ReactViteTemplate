@@ -10,6 +10,8 @@ RUN ls
 
 RUN cd reactjs_aspnetapi_dockerized
 
+RUN ls
+
 RUN npm run build
 
 # Production stage
