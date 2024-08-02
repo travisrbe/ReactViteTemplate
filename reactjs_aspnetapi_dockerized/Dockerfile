@@ -18,6 +18,6 @@ RUN npm install serve -g
 
 COPY **/package.json **/package-lock.json ./
 
-EXPOSE 800
+EXPOSE 80
 
 CMD ["serve", "-p", "80", "-s", "dist"]
