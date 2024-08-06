@@ -40,7 +40,7 @@ function App() {
     );
     
     async function populateWeatherData() {
-        const response = await fetch('https://localhost:32773/weatherforecast');
+        const response = await fetch('http://dotnet-api-template.eastus.azurecontainer.io:8080/weatherforecast');
         const data = await response.json();
         setForecasts(data);
     }
